@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "b42bf1b8-6258-4459-bb5f-c8566e7f163a",
+		"name": "ToolBox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10848367"
+	},
+	"item": [
+		{
+			"name": "ExternalApis",
+			"item": [
+				{
+					"name": "ListFiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aSuperSecretKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://echo-serv.tbxnet.com/v1/secret/files",
+							"protocol": "https",
+							"host": [
+								"echo-serv",
+								"tbxnet",
+								"com"
+							],
+							"path": [
+								"v1",
+								"secret",
+								"files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListFilesExample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://echo-serv.tbxnet.com/v1/secret/files",
+									"protocol": "https",
+									"host": [
+										"echo-serv",
+										"tbxnet",
+										"com"
+									],
+									"path": [
+										"v1",
+										"secret",
+										"files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Jan 2024 14:21:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"79-YIEs2/NsDaFuCQCeEm7OGIT0Ep4\""
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "84c1a40f2dfaab29-EZE"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"files\": [\n        \"test1.csv\",\n        \"test2.csv\",\n        \"test3.csv\",\n        \"test18.csv\",\n        \"test4.csv\",\n        \"test5.csv\",\n        \"test6.csv\",\n        \"test9.csv\",\n        \"test15.csv\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "DownloadFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aSuperSecretKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://echo-serv.tbxnet.com/v1/secret/file/:file",
+							"protocol": "https",
+							"host": [
+								"echo-serv",
+								"tbxnet",
+								"com"
+							],
+							"path": [
+								"v1",
+								"secret",
+								"file",
+								":file"
+							],
+							"variable": [
+								{
+									"key": "file",
+									"value": "test18.csv"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DownloadFileExample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://echo-serv.tbxnet.com/v1/secret/file/:file",
+									"protocol": "https",
+									"host": [
+										"echo-serv",
+										"tbxnet",
+										"com"
+									],
+									"path": [
+										"v1",
+										"secret",
+										"file",
+										":file"
+									],
+									"variable": [
+										{
+											"key": "file",
+											"value": "test2.csv"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Jan 2024 14:30:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/csv"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "MISS"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Sat, 27 Jan 2024 14:30:12 GMT"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "84c1b1369c6dab32-EZE"
+								}
+							],
+							"cookie": [],
+							"body": "file,text,number,hex\ntest2.csv,QTCoI\ntest2.csv,hmFuaYTlZlQFtALfzsT,32,fa8f7dc90716b3134bfa738914104cae"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ProcessData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/files/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"files",
+						"data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ProcessDataExample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/files/data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"files",
+								"data"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1642"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66a-fU8L6hAiqOZCy/AO50x2mi4llQc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Jan 2024 14:04:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"results\": [\n        {\n            \"file\": \"test1.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test2.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"InfwUYltNKoJNjdKglEfCgnm\",\n                    \"number\": \"832856047\",\n                    \"hex\": \"5fefbed19a010c56ad4fe0eb4edbdac4\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"Tu\",\n                    \"number\": \"98265\",\n                    \"hex\": \"d0f25e5ef06624ea18a5b1e12cc2eb2a\"\n                },\n                {\n                    \"text\": \"iidDiTadLHoHzQhVfU\",\n                    \"number\": \"3743\",\n                    \"hex\": \"d5a73bd4ea8fdd85f94bb8ff4da23aea\"\n                },\n                {\n                    \"text\": \"SKLAedciPpdhucSnQXvbWpdCGZ\",\n                    \"number\": \"2370842\",\n                    \"hex\": \"263405cbd03e1e2d936fed17bb0f1806\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test18.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test6.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test9.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"mXMwVNGviGS\",\n                    \"number\": \"397\",\n                    \"hex\": \"5e4704354d1e007b0db8d86275c3d9aa\"\n                },\n                {\n                    \"text\": \"QQREqpvEPBteiKLFadNnEMYbw\",\n                    \"number\": \"65496\",\n                    \"hex\": \"c56b5412229f5a8fc4890bc0168f0489\"\n                },\n                {\n                    \"text\": \"cBjJnhCwfC\",\n                    \"number\": \"775157918\",\n                    \"hex\": \"9c2383e0b10a3fe343a6efa7906421d6\"\n                },\n                {\n                    \"text\": \"pW\",\n                    \"number\": \"98701\",\n                    \"hex\": \"9c2b919a6f8ab4dd2b51de1cf235bc7c\"\n                },\n                {\n                    \"text\": \"SQcGhULAfjwHkCoQHqZWTJQoMelbt\",\n                    \"number\": \"088903\",\n                    \"hex\": \"f8e48a96cf0693158ae4083695527223\"\n                },\n                {\n                    \"text\": \"tArdFuzlxkkCxraPxvRtnnqy\",\n                    \"number\": \"46347971652198307201968067727897\",\n                    \"hex\": \"229d316bccf852cdc4c559692780cd83\"\n                },\n                {\n                    \"text\": \"HoTOOpX\",\n                    \"number\": \"165372524\",\n                    \"hex\": \"92365e9d6ae7f648484facef5a464465\"\n                },\n                {\n                    \"text\": \"TMZaOnqsDMgM\",\n                    \"number\": \"74260\",\n                    \"hex\": \"6318e427d23e3ba5cc016b72dfeadca3\"\n                },\n                {\n                    \"text\": \"rUeHkJnoqt\",\n                    \"number\": \"139078\",\n                    \"hex\": \"d15387c0a653c2080cf90c3a0952d88b\"\n                },\n                {\n                    \"text\": \"MSoPMbcDQ\",\n                    \"number\": \"144091\",\n                    \"hex\": \"1b02f06e1489a13aefe10751c6178d0a\"\n                },\n                {\n                    \"text\": \"GsbimgHSoeYXN\",\n                    \"number\": \"946461\",\n                    \"hex\": \"d92a26089b7c174dee63ba4b20691452\"\n                },\n                {\n                    \"text\": \"XzgkmPr\",\n                    \"number\": \"9964605\",\n                    \"hex\": \"9f66cd194fa3554ab176a7914fef6e2b\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test15.csv\",\n            \"lines\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "ProcessDataByFileName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/files/data?fileName=test3.csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"files",
+						"data"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "test3.csv"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ProcessDataByFileNameExample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/files/data?fileName=test3.csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"files",
+								"data"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "test3.csv"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "348"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15c-0pVTcUFlZAcPLfSPlBDm3VNbcnQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jan 2024 16:36:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"results\": [\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"dJHmBvgedJHLgoengApYhSTxxmehDc\",\n                    \"number\": \"36959\",\n                    \"hex\": \"8a07c0da21c381e463a28cc791192a49\"\n                },\n                {\n                    \"text\": \"hkuwuBLLkRDIrxdEGCrYsiaeN\",\n                    \"number\": \"804723710\",\n                    \"hex\": \"dfeb49e76f74b9c10dcddfe4dc53f62b\"\n                },\n                {\n                    \"text\": \"HeNZNGNfUFpdUPlmCbTjBWjxvs\",\n                    \"number\": \"9\",\n                    \"hex\": \"b0fb91f05a545622bac8a8f41373cc7d\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GetFilesList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/files/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"files",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetFIlesListExample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/files/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"files",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8f-gqQMbfkpN0j8yq+ggeD0kIli6gI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jan 2024 18:22:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"files\": [\n            \"test1.csv\",\n            \"test2.csv\",\n            \"test3.csv\",\n            \"test18.csv\",\n            \"test4.csv\",\n            \"test5.csv\",\n            \"test6.csv\",\n            \"test9.csv\",\n            \"test15.csv\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
