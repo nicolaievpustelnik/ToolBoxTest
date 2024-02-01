@@ -1,6 +1,10 @@
 # <h1 align="center">
   <br>
+<<<<<<< HEAD
    <a href=""><img src="./public/img/toolbox.png" alt="" width="200"></a>
+=======
+   <a align="center" href=""><img src="./public/img/toolbox.jpeg" alt="" width="200"></a>
+>>>>>>> 9c23ac778ff6e5185c0e158f53aff19d33d9492b
 </h1>
 
 <h4 align="center">ToolBoxTest es un proyecto que utiliza Docker para ejecutar dos subproyectos: un back-end en Node.js y Express y un front-end en React.</h4>
