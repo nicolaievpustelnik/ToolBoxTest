@@ -70,9 +70,6 @@ $ cd ToolBoxTest
 * ## 💻 Ejecucion con Docker
 
 ```bash
-# Instalar dependencias
-$ npm install
-
 # Ejecutar docker
 $ sudo docker-compose up --build
 ```
