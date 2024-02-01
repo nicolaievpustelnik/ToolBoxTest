@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, Alert } from 'react-bootstrap';
 import '../styles/table.css';
 
-function Tabla() {
+function Tabla({ onDataFetch }) {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [fileName, setFileName] = useState('');
@@ -16,21 +16,33 @@ function Tabla() {
       const url = fileName === '' ? 'http://localhost:4001/files/data' : `http://localhost:4001/files/data?fileName=${fileName}`;
       const response = await fetch(url);
 
+      if (!response) {
+        throw new Error('Empty response');
+      }
+
       if (!response.ok) {
         throw new Error(`Failed to fetch data. Status: ${response.status}`);
       }
 
-      const result = await response.json();
-      const filteredData = result.results || [];
-
-      setData(filteredData);
+      const contentType = response.headers.get('content-type');
+      if (contentType) {
+        const result = await response.json();
+        const filteredData = result.results || [];
+        setData(filteredData);
+      }
     } catch (error) {
-      console.error('Error fetching data:', error);
-      setError('Failed to fetch data. Please try again later or check your server.');
+      console.error('Error fetching data:', error.message || error);
+
+      // Manejar el caso de respuesta vacía específicamente
+      if (error.message === 'Empty response') {
+        setError('Failed to fetch data. The server is unreachable.');
+      } else {
+        setError('Failed to fetch data. Please try again later or check your server.');
+      }
     }
   };
 
-  // Table
+
   return (
     <div className="App">
       <h1 className="h1-text">React Test App</h1>
