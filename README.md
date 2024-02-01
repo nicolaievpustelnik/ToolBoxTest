@@ -67,7 +67,7 @@ $ git clone https://github.com/tu_usuario/ToolBoxTest
 $ cd ToolBoxTest
 ```
 
-* ## 💻 Ejecucion de Front o Back por separado 
+* ## 💻 Ejecucion con Docker
 
 ```bash
 # Instalar dependencias
@@ -77,7 +77,7 @@ $ npm install
 $ sudo docker-compose up --build
 ```
 
-* ## 🐳 Ejecucion con Docker
+* ## 🐳 Ejecucion de Front o Back por separado 
   **Puertos**
     - Back-end: 4001
     - Front-end: 3000
@@ -94,6 +94,17 @@ $ cd tool-box-back && npm start
 $ cd tool-box-front && npm start
 ```
 
+* ## ✅ Tests
+**Front-end: (Jest)**
+```bash
+# Ejecutar test
+$ cd tool-box-back && npm test
+```
+**Back-end: (Mocha y Chai)**
+```bash
+# Ejecutar test
+$ cd tool-box-back && npm test
+```
 ## 📩 Correo electrónico
 
 Es decir, si te gustó usar esta aplicación o te ayudó de alguna manera, me gustaría que me envíes un correo electrónico a <nicolaievbrito@gmail.com> sobre cualquier cosa que quieras decir sobre este software. ¡Realmente lo apreciaría!
