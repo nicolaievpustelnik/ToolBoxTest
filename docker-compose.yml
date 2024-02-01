@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tool-box-back:
+    build: ./tool-box-back
+    ports:
+      - "4001:4001"
+
+  tool-box-front:
+    build: ./tool-box-front
+    ports:
+      - "3000:3000"

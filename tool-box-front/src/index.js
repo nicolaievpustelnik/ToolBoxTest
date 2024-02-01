@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { store } from '../src/redux/store.js';
+import { store } from './redux/store.js';
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client'
 
