@@ -1,6 +1,6 @@
 # <h1 align="center">
   <br>
-  <a href=""><img src="./public/img/code.png" alt="" width="200"></a>
+  <img src="./public/img/toolbox.png" alt="" width="200">
 </h1>
 
 <h4 align="center">ToolBoxTest es un proyecto que utiliza Docker para ejecutar dos subproyectos: un back-end en Node.js y Express y un front-end en React.</h4>
@@ -29,7 +29,7 @@
   </a>
 </p>
 
-![screenshot](./src/public/img/toolboxtest_screenshot.png)
+![screenshot](./public/img/code.png)
 
 ## 📚 Documentación
 Consulta la [Documentación](https://tbxnet.applytojob.com/questionnaire/5fb6954bc1c6f/prospect_20240119170406_6ZKWUPJSILNUASL7/projob_20240119170406_KYYG56YA7TJO62YK) para obtener más detalles.
