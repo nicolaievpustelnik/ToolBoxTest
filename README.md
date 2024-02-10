@@ -108,7 +108,7 @@ $ cd tool-box-back && npm test
 
 <img src="./public/img/swagger.png">
 
-## Colección Postman
+## 👨‍🚀 Colección Postman
 
 [Descargar Colección Postman](./ToolBox.postman_collection.json)
 
@@ -171,10 +171,13 @@ Este software utiliza los siguientes paquetes de código abierto:
 * [Chai](https://www.chaijs.com/)
 * [Jest](https://jestjs.io/)
 * [Docker](https://www.docker.com/)
+* [Docker](https://www.docker.com/)
 
 **Librerías adicionales:**
 
 * [Axios](https://github.com/axios/axios)
+* [Serverless](https://www.serverless.com/)
+* [AWS](https://aws.amazon.com/es/)
 
 **Herramientas:**
 
