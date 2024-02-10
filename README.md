@@ -67,14 +67,14 @@ $ git clone https://github.com/tu_usuario/ToolBoxTest
 $ cd ToolBoxTest
 ```
 
-* ## 💻 Ejecucion con Docker
+* ### 💻 Ejecucion con Docker
 
 ```bash
 # Ejecutar docker
 $ sudo docker-compose up --build
 ```
 
-* ## 🐳 Ejecucion de Front o Back por separado 
+* ### 🐳 Ejecucion de Front o Back por separado 
   **Puertos**
     - Back-end: 4001
     - Front-end: 3000
@@ -102,6 +102,59 @@ $ cd tool-box-back && npm test
 # Ejecutar test
 $ cd tool-box-back && npm test
 ```
+## 🤓 Swagger
+
+**http://localhost:4001/docs/**
+
+<img src="./public/img/swagger.png">
+
+## Colección Postman
+
+[Descargar Colección Postman](./ToolBox.postman_collection.json)
+
+<img src="./public/img/postman.png">
+
+## ☁️ Lambda - S3 (Extras)
+
+**Login [AWS](https://236767511350.signin.aws.amazon.com/console)**
+
+* **Account ID**: 236767511350
+* **IAM user name**: ToolBoxTest
+* **Password**: ToolBoxTest2024
+
+<img src="./public/img/login_aws.png">
+
+* ### ⚡ Ejecutar lambda para guardar archivos 
+
+<img src="./public/img/lambda.png">
+
+Ejemplo ***curl*** via postman :
+
+```
+curl --location 'http://localhost:4001/files/data/save' \
+--header 'Content-Type: application/json' \
+--data '{
+    "results": [
+        {
+            "file": "test2.csv",
+            "lines": [
+                {
+                    "text": "YKGJLeTXCITBxpTezpiFvahxL",
+                    "number": "0189127",
+                    "hex": "33b81ddac9bb7abae2e588b27f2126cc"
+                }
+            ]
+        }
+    ]
+}'
+```
+
+* ### 📦 Ver archivos guardados bucket S3
+
+Ingresar al Bucket ***tool-box-test/***
+
+<img src="./public/img/s3.png">
+
 ## 📩 Correo electrónico
 
 Es decir, si te gustó usar esta aplicación o te ayudó de alguna manera, me gustaría que me envíes un correo electrónico a <nicolaievbrito@gmail.com> sobre cualquier cosa que quieras decir sobre este software. ¡Realmente lo apreciaría!
