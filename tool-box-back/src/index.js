@@ -1,4 +1,3 @@
-const express = require('express');
 const { json } = require('express');
 
 const app = require('./config/server');

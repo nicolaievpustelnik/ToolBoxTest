@@ -1,0 +1,22 @@
+service: tool-box-serverless
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  profile: AdminTest
+  stage: dev
+  role: arn:aws:iam::236767511350:role/tool-box-role-lambda
+  region: us-east-1
+  memorySize: 256
+  timeout: 20
+
+functions:
+  saveData:
+    name: tool-box-save-data
+    handler: src/lambda/handler.saveData
+    events:
+      - http:
+          path: /data/save
+          method: POST

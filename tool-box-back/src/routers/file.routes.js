@@ -3,7 +3,8 @@ const router = Router();
 
 const {
     processFiles,
-    getFilesList
+    getFilesList,
+    saveData
 } = require('../controllers/file.controller');
 
 /**
@@ -93,5 +94,50 @@ router.get('/files/data', processFiles);
  *                     type: string
  */
 router.get('/files/list', getFilesList);
+
+/**
+ * @openapi
+ * /files/data/save:
+ *   post:
+ *     tags:
+ *       - Files
+ *     description: Save data to files.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               results:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     file:
+ *                       type: string
+ *                     lines:
+ *                       type: array
+ *                       items:
+ *                         type: object
+ *                         properties:
+ *                           text:
+ *                             type: string
+ *                           number:
+ *                             type: string
+ *                           hex:
+ *                             type: string
+ *     responses:
+ *       200:
+ *         description: Files saved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ */
+router.post('/files/data/save', saveData);
 
 module.exports = router;

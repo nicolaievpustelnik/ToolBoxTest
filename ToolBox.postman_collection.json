@@ -224,6 +224,123 @@
 							"body": "file,text,number,hex\ntest2.csv,QTCoI\ntest2.csv,hmFuaYTlZlQFtALfzsT,32,fa8f7dc90716b3134bfa738914104cae"
 						}
 					]
+				},
+				{
+					"name": "LambdaSaveData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"results\": [\n        {\n            \"file\": \"test1.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test2.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"YKGJLeTXCITBxpTezpiFvahxL\",\n                    \"number\": \"0189127\",\n                    \"hex\": \"33b81ddac9bb7abae2e588b27f2126cc\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"HRDghmOQgkHyZFiEExhP\",\n                    \"number\": \"60853054781467111905087582466482\",\n                    \"hex\": \"1b6dc279d12def25d62e0866ead37f4b\"\n                },\n                {\n                    \"text\": \"vnGFqxiJzesCZfziWhFFIfrDKk\",\n                    \"number\": \"25301877\",\n                    \"hex\": \"810298ca80b1039e3a7f1f3bcc773c6a\"\n                },\n                {\n                    \"text\": \"AHXBhES\",\n                    \"number\": \"7\",\n                    \"hex\": \"7108ab00494aa06b83b29600d1afa23c\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test18.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test6.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test9.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"NjtVyDio\",\n                    \"number\": \"5408\",\n                    \"hex\": \"b3faf7983e5bcef59e0a23b4287df544\"\n                },\n                {\n                    \"text\": \"pELfhkRaxRHgqP\",\n                    \"number\": \"9\",\n                    \"hex\": \"15930a0bded000e266c75b13ae792d2c\"\n                },\n                {\n                    \"text\": \"nYKSgovtSCJRAvqggDStHRAw\",\n                    \"number\": \"6363\",\n                    \"hex\": \"c222dc4a5af43d5bba6a23874cd1f7d4\"\n                },\n                {\n                    \"text\": \"lkdoKyhtXv\",\n                    \"number\": \"41073259\",\n                    \"hex\": \"497bf415237a03d871500f2f8f0d26f3\"\n                },\n                {\n                    \"text\": \"txjzICyctmEz\",\n                    \"number\": \"6\",\n                    \"hex\": \"f4b447d4e21befff87147929b7f2a1b1\"\n                },\n                {\n                    \"text\": \"fXhdoVctYDoOoctIpiX\",\n                    \"number\": \"993\",\n                    \"hex\": \"927c3b4f2abae2815dbfefb94e3af553\"\n                },\n                {\n                    \"text\": \"QkqnuGhh\",\n                    \"number\": \"54412777620311205634744989696785\",\n                    \"hex\": \"80c4682396ea19b9418d33bf6fd9d9e7\"\n                },\n                {\n                    \"text\": \"HODdfaOvItAbbAghtvIBlPCrmlGZEr\",\n                    \"number\": \"35824905\",\n                    \"hex\": \"4aead45a64fa19f01f2c469221185ca3\"\n                },\n                {\n                    \"text\": \"cIFQWycaDtyHeUTDJYIKaxkdmYgMh\",\n                    \"number\": \"339633667\",\n                    \"hex\": \"81751056c48fe46f15944e6bd65d34c3\"\n                },\n                {\n                    \"text\": \"gsBjEscZgYSxI\",\n                    \"number\": \"082842110\",\n                    \"hex\": \"f6a972afc3e2bab174cd2819dcdf3786\"\n                },\n                {\n                    \"text\": \"INknMoxADZqlzcCFSyhhpS\",\n                    \"number\": \"5923\",\n                    \"hex\": \"e55af7959aa86ef4677b603c1bc4b52b\"\n                },\n                {\n                    \"text\": \"ZSXvlaVZSIzgEFYByDtM\",\n                    \"number\": \"968169581\",\n                    \"hex\": \"08267bc47269d0f6ec2f477551c09d14\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test15.csv\",\n            \"lines\": []\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://8jf7ugcbxj.execute-api.us-east-1.amazonaws.com/dev/data/save",
+							"protocol": "https",
+							"host": [
+								"8jf7ugcbxj",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"data",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LambdaSaveDataExample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": 200,\n    \"results\": [\n        {\n            \"file\": \"test1.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test2.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"YKGJLeTXCITBxpTezpiFvahxL\",\n                    \"number\": \"0189127\",\n                    \"hex\": \"33b81ddac9bb7abae2e588b27f2126cc\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"HRDghmOQgkHyZFiEExhP\",\n                    \"number\": \"60853054781467111905087582466482\",\n                    \"hex\": \"1b6dc279d12def25d62e0866ead37f4b\"\n                },\n                {\n                    \"text\": \"vnGFqxiJzesCZfziWhFFIfrDKk\",\n                    \"number\": \"25301877\",\n                    \"hex\": \"810298ca80b1039e3a7f1f3bcc773c6a\"\n                },\n                {\n                    \"text\": \"AHXBhES\",\n                    \"number\": \"7\",\n                    \"hex\": \"7108ab00494aa06b83b29600d1afa23c\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test18.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test6.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test9.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"NjtVyDio\",\n                    \"number\": \"5408\",\n                    \"hex\": \"b3faf7983e5bcef59e0a23b4287df544\"\n                },\n                {\n                    \"text\": \"pELfhkRaxRHgqP\",\n                    \"number\": \"9\",\n                    \"hex\": \"15930a0bded000e266c75b13ae792d2c\"\n                },\n                {\n                    \"text\": \"nYKSgovtSCJRAvqggDStHRAw\",\n                    \"number\": \"6363\",\n                    \"hex\": \"c222dc4a5af43d5bba6a23874cd1f7d4\"\n                },\n                {\n                    \"text\": \"lkdoKyhtXv\",\n                    \"number\": \"41073259\",\n                    \"hex\": \"497bf415237a03d871500f2f8f0d26f3\"\n                },\n                {\n                    \"text\": \"txjzICyctmEz\",\n                    \"number\": \"6\",\n                    \"hex\": \"f4b447d4e21befff87147929b7f2a1b1\"\n                },\n                {\n                    \"text\": \"fXhdoVctYDoOoctIpiX\",\n                    \"number\": \"993\",\n                    \"hex\": \"927c3b4f2abae2815dbfefb94e3af553\"\n                },\n                {\n                    \"text\": \"QkqnuGhh\",\n                    \"number\": \"54412777620311205634744989696785\",\n                    \"hex\": \"80c4682396ea19b9418d33bf6fd9d9e7\"\n                },\n                {\n                    \"text\": \"HODdfaOvItAbbAghtvIBlPCrmlGZEr\",\n                    \"number\": \"35824905\",\n                    \"hex\": \"4aead45a64fa19f01f2c469221185ca3\"\n                },\n                {\n                    \"text\": \"cIFQWycaDtyHeUTDJYIKaxkdmYgMh\",\n                    \"number\": \"339633667\",\n                    \"hex\": \"81751056c48fe46f15944e6bd65d34c3\"\n                },\n                {\n                    \"text\": \"gsBjEscZgYSxI\",\n                    \"number\": \"082842110\",\n                    \"hex\": \"f6a972afc3e2bab174cd2819dcdf3786\"\n                },\n                {\n                    \"text\": \"INknMoxADZqlzcCFSyhhpS\",\n                    \"number\": \"5923\",\n                    \"hex\": \"e55af7959aa86ef4677b603c1bc4b52b\"\n                },\n                {\n                    \"text\": \"ZSXvlaVZSIzgEFYByDtM\",\n                    \"number\": \"968169581\",\n                    \"hex\": \"08267bc47269d0f6ec2f477551c09d14\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test15.csv\",\n            \"lines\": []\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://8jf7ugcbxj.execute-api.us-east-1.amazonaws.com/dev/data/save",
+									"protocol": "https",
+									"host": [
+										"8jf7ugcbxj",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"data",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Feb 2024 15:53:21 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "f278f6ff-1e47-419b-af9c-2d21ea202c11"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "S7VNzFaooAMEjRg="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-65c79bf1-686ccedf7ae2b1814e9a7990;Parent=6d300998c6bcb621;Sampled=0;lineage=8746cbc6:0"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 89feb3a8fb4625223fe93b87caff568c.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "EZE50-P2"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "C92KfOrkdyPyDbC7UtOlsQBPeR96-Cp6Vj8jdFYqzzHVdxcTxHktXg=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The files were saved successfully\",\n    \"input\": [\n        {\n            \"file\": \"test2.csv\"\n        },\n        {\n            \"file\": \"test3.csv\"\n        },\n        {\n            \"file\": \"test9.csv\"\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -469,6 +586,105 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"files\": [\n            \"test1.csv\",\n            \"test2.csv\",\n            \"test3.csv\",\n            \"test18.csv\",\n            \"test4.csv\",\n            \"test5.csv\",\n            \"test6.csv\",\n            \"test9.csv\",\n            \"test15.csv\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "ProcessSaveData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"results\": [\n        {\n            \"file\": \"test1.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test2.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"YKGJLeTXCITBxpTezpiFvahxL\",\n                    \"number\": \"0189127\",\n                    \"hex\": \"33b81ddac9bb7abae2e588b27f2126cc\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"HRDghmOQgkHyZFiEExhP\",\n                    \"number\": \"60853054781467111905087582466482\",\n                    \"hex\": \"1b6dc279d12def25d62e0866ead37f4b\"\n                },\n                {\n                    \"text\": \"vnGFqxiJzesCZfziWhFFIfrDKk\",\n                    \"number\": \"25301877\",\n                    \"hex\": \"810298ca80b1039e3a7f1f3bcc773c6a\"\n                },\n                {\n                    \"text\": \"AHXBhES\",\n                    \"number\": \"7\",\n                    \"hex\": \"7108ab00494aa06b83b29600d1afa23c\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test18.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test6.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test9.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"NjtVyDio\",\n                    \"number\": \"5408\",\n                    \"hex\": \"b3faf7983e5bcef59e0a23b4287df544\"\n                },\n                {\n                    \"text\": \"pELfhkRaxRHgqP\",\n                    \"number\": \"9\",\n                    \"hex\": \"15930a0bded000e266c75b13ae792d2c\"\n                },\n                {\n                    \"text\": \"nYKSgovtSCJRAvqggDStHRAw\",\n                    \"number\": \"6363\",\n                    \"hex\": \"c222dc4a5af43d5bba6a23874cd1f7d4\"\n                },\n                {\n                    \"text\": \"lkdoKyhtXv\",\n                    \"number\": \"41073259\",\n                    \"hex\": \"497bf415237a03d871500f2f8f0d26f3\"\n                },\n                {\n                    \"text\": \"txjzICyctmEz\",\n                    \"number\": \"6\",\n                    \"hex\": \"f4b447d4e21befff87147929b7f2a1b1\"\n                },\n                {\n                    \"text\": \"fXhdoVctYDoOoctIpiX\",\n                    \"number\": \"993\",\n                    \"hex\": \"927c3b4f2abae2815dbfefb94e3af553\"\n                },\n                {\n                    \"text\": \"QkqnuGhh\",\n                    \"number\": \"54412777620311205634744989696785\",\n                    \"hex\": \"80c4682396ea19b9418d33bf6fd9d9e7\"\n                },\n                {\n                    \"text\": \"HODdfaOvItAbbAghtvIBlPCrmlGZEr\",\n                    \"number\": \"35824905\",\n                    \"hex\": \"4aead45a64fa19f01f2c469221185ca3\"\n                },\n                {\n                    \"text\": \"cIFQWycaDtyHeUTDJYIKaxkdmYgMh\",\n                    \"number\": \"339633667\",\n                    \"hex\": \"81751056c48fe46f15944e6bd65d34c3\"\n                },\n                {\n                    \"text\": \"gsBjEscZgYSxI\",\n                    \"number\": \"082842110\",\n                    \"hex\": \"f6a972afc3e2bab174cd2819dcdf3786\"\n                },\n                {\n                    \"text\": \"INknMoxADZqlzcCFSyhhpS\",\n                    \"number\": \"5923\",\n                    \"hex\": \"e55af7959aa86ef4677b603c1bc4b52b\"\n                },\n                {\n                    \"text\": \"ZSXvlaVZSIzgEFYByDtM\",\n                    \"number\": \"968169581\",\n                    \"hex\": \"08267bc47269d0f6ec2f477551c09d14\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test15.csv\",\n            \"lines\": []\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/files/data/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"files",
+						"data",
+						"save"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ProcessSaveDataExample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"results\": [\n        {\n            \"file\": \"test1.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test2.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"YKGJLeTXCITBxpTezpiFvahxL\",\n                    \"number\": \"0189127\",\n                    \"hex\": \"33b81ddac9bb7abae2e588b27f2126cc\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test3.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"HRDghmOQgkHyZFiEExhP\",\n                    \"number\": \"60853054781467111905087582466482\",\n                    \"hex\": \"1b6dc279d12def25d62e0866ead37f4b\"\n                },\n                {\n                    \"text\": \"vnGFqxiJzesCZfziWhFFIfrDKk\",\n                    \"number\": \"25301877\",\n                    \"hex\": \"810298ca80b1039e3a7f1f3bcc773c6a\"\n                },\n                {\n                    \"text\": \"AHXBhES\",\n                    \"number\": \"7\",\n                    \"hex\": \"7108ab00494aa06b83b29600d1afa23c\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test18.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test6.csv\",\n            \"lines\": []\n        },\n        {\n            \"file\": \"test9.csv\",\n            \"lines\": [\n                {\n                    \"text\": \"NjtVyDio\",\n                    \"number\": \"5408\",\n                    \"hex\": \"b3faf7983e5bcef59e0a23b4287df544\"\n                },\n                {\n                    \"text\": \"pELfhkRaxRHgqP\",\n                    \"number\": \"9\",\n                    \"hex\": \"15930a0bded000e266c75b13ae792d2c\"\n                },\n                {\n                    \"text\": \"nYKSgovtSCJRAvqggDStHRAw\",\n                    \"number\": \"6363\",\n                    \"hex\": \"c222dc4a5af43d5bba6a23874cd1f7d4\"\n                },\n                {\n                    \"text\": \"lkdoKyhtXv\",\n                    \"number\": \"41073259\",\n                    \"hex\": \"497bf415237a03d871500f2f8f0d26f3\"\n                },\n                {\n                    \"text\": \"txjzICyctmEz\",\n                    \"number\": \"6\",\n                    \"hex\": \"f4b447d4e21befff87147929b7f2a1b1\"\n                },\n                {\n                    \"text\": \"fXhdoVctYDoOoctIpiX\",\n                    \"number\": \"993\",\n                    \"hex\": \"927c3b4f2abae2815dbfefb94e3af553\"\n                },\n                {\n                    \"text\": \"QkqnuGhh\",\n                    \"number\": \"54412777620311205634744989696785\",\n                    \"hex\": \"80c4682396ea19b9418d33bf6fd9d9e7\"\n                },\n                {\n                    \"text\": \"HODdfaOvItAbbAghtvIBlPCrmlGZEr\",\n                    \"number\": \"35824905\",\n                    \"hex\": \"4aead45a64fa19f01f2c469221185ca3\"\n                },\n                {\n                    \"text\": \"cIFQWycaDtyHeUTDJYIKaxkdmYgMh\",\n                    \"number\": \"339633667\",\n                    \"hex\": \"81751056c48fe46f15944e6bd65d34c3\"\n                },\n                {\n                    \"text\": \"gsBjEscZgYSxI\",\n                    \"number\": \"082842110\",\n                    \"hex\": \"f6a972afc3e2bab174cd2819dcdf3786\"\n                },\n                {\n                    \"text\": \"INknMoxADZqlzcCFSyhhpS\",\n                    \"number\": \"5923\",\n                    \"hex\": \"e55af7959aa86ef4677b603c1bc4b52b\"\n                },\n                {\n                    \"text\": \"ZSXvlaVZSIzgEFYByDtM\",\n                    \"number\": \"968169581\",\n                    \"hex\": \"08267bc47269d0f6ec2f477551c09d14\"\n                }\n            ]\n        },\n        {\n            \"file\": \"test15.csv\",\n            \"lines\": []\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/files/data/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"files",
+								"data",
+								"save"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8e-ofbGoAGGmCALgPrQaqQX41KeI60\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Feb 2024 16:19:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"message\": \"The files were saved successfully\",\n        \"input\": [\n            {\n                \"file\": \"test2.csv\"\n            },\n            {\n                \"file\": \"test3.csv\"\n            },\n            {\n                \"file\": \"test9.csv\"\n            }\n        ]\n    }\n}"
 				}
 			]
 		}

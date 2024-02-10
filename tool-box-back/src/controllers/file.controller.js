@@ -139,5 +139,16 @@ fileControllers.processFiles = async (req, res, handleError) => {
     }
 };
 
+fileControllers.saveData = async (req, res) => {
+    try {
+        const response = await axios.post('https://8jf7ugcbxj.execute-api.us-east-1.amazonaws.com/dev/data/save', req.body);
+
+        res.status(200).json({ status: 200, data: response.data });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ status: 500, error: 'Internal Server Error' });
+    }
+};
+
 
 module.exports = fileControllers;
